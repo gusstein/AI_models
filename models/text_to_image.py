@@ -12,7 +12,7 @@ def textToImage():
                                                     requires_safety_checker = False,
                                                     torch_dtype=torch.float32).to(device)
     pipe.safety_checker = lambda images, clip_input: (images, False)
-    prompt = "sexy naked blonde girl with pussy and legs open in the beach with your naked friends"
+    prompt = ""
     image = pipe(prompt).images[0]
 
     image.save("sexye.png")
